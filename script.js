@@ -4,7 +4,7 @@
 // @version      0.1.0-alpha
 // @description  Keeps track of the price of athome.lu housing prices
 // @license      MIT
-// @author       Filipe Neves (me@filipeneves.net)
+// @author       Filipe Neves (me@filipeneves.net), Brian Tacchi (brian.tacchi@icloud.com)
 // @match        https://www.athome.lu/vente/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=athome.lu
 // @grant        none
