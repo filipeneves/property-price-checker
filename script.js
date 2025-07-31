@@ -153,7 +153,8 @@
                             ticks: {
                                 maxTicksLimit: 6,
                                 color: '#666',
-                                font: { size: 12 }
+                                font: { size: 12 },
+                                autoSkipPadding: 12
                             },
                             grid: {
                                 color: 'rgba(0,0,0,0.03)'
