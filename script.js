@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Athome.lu Price Tracker
 // @namespace    http://tampermonkey.net/
-// @version      0.1.0-alpha
+// @version      0.1.1
 // @description  Keeps track of the price of athome.lu housing prices
 // @license      MIT
 // @author       Filipe Neves (me@filipeneves.net), Brian Tacchi (brian.tacchi@icloud.com)
