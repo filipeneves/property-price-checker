@@ -179,27 +179,22 @@
         document.body.appendChild(script);
     }
 
-    function waitForPriceAndInject(timeoutMs = 10000) {
-        const start = Date.now();
-
-        const check = () => {
+    function observePageAndInject() {
+        const observer = new MutationObserver(() => {
             const id = getPageId();
             const price = getPrice();
+            const infoBlock = document.querySelector('.info-block');
 
-            if (id && price) {
+            if (id && price && infoBlock && !document.getElementById('price-history-chart')) {
                 sendPriceData(id, price);
-                injectHistoryGraph(id); // ← new!
-            } else if (Date.now() - start < timeoutMs) {
-                setTimeout(check, 500);
-            } else {
-                console.warn('[Athome Tracker] Timed out waiting for page data.');
+                injectHistoryGraph(id);
             }
-        };
+        });
 
-        check();
+        observer.observe(document.body, { childList: true, subtree: true });
     }
 
     window.addEventListener('load', () => {
-        waitForPriceAndInject();
+        observePageAndInject();
     });
 })();
